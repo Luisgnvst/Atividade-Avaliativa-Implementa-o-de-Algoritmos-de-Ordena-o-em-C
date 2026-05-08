@@ -2,12 +2,10 @@
 #include <stdlib.h>
 #include <time.h>
 
-// Protótipos das funções auxiliares
 void mostrarVetor(int v[], int tam);
 void preencherAleatorio(int v[], int tam);
 void copiarVetor(int origem[], int destino[], int tam);
 
-// Protótipos de todos os algoritmos
 void bubbleSort(int v[], int tam);
 void selectionSort(int v[], int tam);
 void insertionSort(int v[], int tam);
@@ -15,12 +13,11 @@ void shellSort(int v[], int tam);
 void quickSort(int v[], int inicio, int fim);
 void mergeSort(int v[], int l, int r);
 
-// Funções auxiliares específicas para Quick e Merge
 int particao(int v[], int baixo, int alto);
 void merge(int v[], int l, int m, int r);
 
 int main() {
-    int tamanho = 10; // Para testar rápido.
+    int tamanho = 10; 
     int original[tamanho], vetor_teste[tamanho];
     int opcao;
     clock_t inicio_tempo, fim_tempo;
@@ -70,8 +67,6 @@ int main() {
     return 0;
 }
 
-//IMPLEMENTAÇaO DOS ALGORITMOS
-
 void bubbleSort(int v[], int tam) {
     int aux;
     for (int i = 0; i < tam - 1; i++)
@@ -104,7 +99,6 @@ void insertionSort(int v[], int tam) {
     }
 }
 
-//Quick Sort 
 int particao(int v[], int baixo, int alto) {
     int pivo = v[alto];
     int i = (baixo - 1), aux;
@@ -126,7 +120,6 @@ void quickSort(int v[], int inicio, int fim) {
     }
 }
 
-// Merge Sort 
 void merge(int v[], int l, int m, int r) {
     int i, j, k;
     int n1 = m - l + 1;
@@ -164,7 +157,6 @@ void shellSort(int v[], int tam) {
     }
 }
 
-// FUNÇoES DE SUPORTE 
 void mostrarVetor(int v[], int tam) {
     for (int i = 0; i < tam; i++) printf("%d ", v[i]);
     printf("\n");
